@@ -1,9 +1,8 @@
-from enum import StrEnum, Enum, unique, auto, IntEnum
-from enum import StrEnum
+from enum import Enum, unique, IntEnum
 
 
 @unique
-class ItemType(StrEnum):
+class ItemType(Enum):
     WEAPON = "weapon"
     HEAD = "head"
     BODY = "body"

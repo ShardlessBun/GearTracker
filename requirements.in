@@ -1,3 +1,4 @@
+asyncpg
 coreapi
 marshmallow
 pip-tools
