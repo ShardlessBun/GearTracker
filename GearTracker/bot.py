@@ -1,12 +1,10 @@
 import os
 from abc import ABC
 
-import sqlalchemy as sa
-import sqlalchemy.ext.asyncio
 from discord.bot import Bot
-from GearTracker.objects.db import metadata as meta
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncEngine
-from sqlalchemy.sql.ddl import CreateTable
+
+from GearTracker.objects.db import metadata as meta
 
 
 class LootBot(Bot, ABC):

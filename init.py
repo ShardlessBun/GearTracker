@@ -1,13 +1,8 @@
 import asyncio
 import os
 import sys
-from abc import ABC
 
-import sqlalchemy as sa
-from discord.bot import Bot
 from discord import Intents
-from discord.ext import commands
-from sqlalchemy.schema import CreateTable
 
 from GearTracker.bot import LootBot
 
@@ -21,5 +16,10 @@ if sys.version_info >= (3, 8) and sys.platform.lower().startswith("win"):
 
 bot = LootBot(auto_sync_commands=True,
               intents=Intents.default())
+
+for filename in os.listdir('GearTracker/cogs'):
+    if filename.endswith('.py'):
+        bot.load_extensions()
+        bot.load_extension(f'GearTracker.cogs.{filename[:-3]}')
 
 bot.run(os.environ.get("BOT_TOKEN"))

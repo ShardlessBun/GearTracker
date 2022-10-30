@@ -10,7 +10,6 @@ from GearTracker.objects.enums import EventType, ItemType, SourceType, StaticRol
 db = declarative_base()
 metadata = sa.MetaData()
 
-# id_pk_column = Column("id", Integer, primary_key=True, autoincrement='auto')
 item_type_enum = ENUM(ItemType, name="item_type")
 source_type_enum = ENUM(SourceType, name="source_type")
 static_role_enum = ENUM(StaticRole, name="static_role")
