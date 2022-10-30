@@ -1,0 +1,6 @@
+coreapi
+marshmallow
+pip-tools
+py-cord
+setuptools
+sqlalchemy>=2.0.0b2
